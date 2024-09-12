@@ -28,11 +28,11 @@ OK 2) num outlier in lon lat :
 
 df_train_outliar = df_train[(df_train['latitude'] > 0) & (df_train['longitude'] > 0)]
 
-3) Feature creation :
+OK 3) Feature creation :
 
 df_train['beds_per_bedroom'] = df_train['beds'] / df_train['bedrooms']
 
-4) Num missing values :
+OK 4) Num missing values :
 
 # Calculate the percentage of null values (NaN or None) for all columns
 nan_percentages = X_train.isnull().sum() / float(len(X_train))
@@ -56,7 +56,7 @@ X_train_num[X_train_num.abs() > np.finfo(np.float64).max] = np.nan
 
 ### Categorical ###
 
-cat_outliers
+OK cat_outliers
 
 X_train_cat_filtered = X_train_cat[(X_train_cat['host_is_superhost'] != '3') &
                                    (X_train_cat['is_location_exact'] != '2019-03-13') &
@@ -101,7 +101,6 @@ significant_categories = relative_freqs[relative_freqs >= threshold].index
 # Replace infrequent categories with 'Other'
 X_train_cat_filtered['property_type'] = X_train_cat_filtered['property_type'].apply(lambda x: x if x in significant_categories else 'Other')
 X_train_cat_filtered['property_type'].value_counts()
-
 
 ===
 
