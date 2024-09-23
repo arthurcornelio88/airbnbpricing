@@ -1,7 +1,7 @@
 # airbnbpricing
 Predicting a housing pricing with a large AirBnB Kaggle's dataset
 
-https://www.kaggle.com/datasets/allanbruno/airbnb-rio-de-janeiro
+[My Kaggle's Notebook](https://www.kaggle.com/code/arthurcornelio/predicting-airbnb-housing-prices-in-rio-de-janeiro)
 
 ## 15 Acknowledgments
 
